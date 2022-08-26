@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserList {
-    private String path;
+    private final String path;
     private static final String RELATIVE_PATH = ".\\src\\main\\resources\\out\\user.json";
 
     public String getPath() {
@@ -40,7 +40,7 @@ public class UserList {
             System.err.print(e.getMessage());
         }
         String[] arr;
-        arr = users.split("\r\n");
+        arr = users.split(System.lineSeparator());
         System.out.println(Arrays.toString(arr));
         User[] usersList = new User[arr.length-1];
 
@@ -57,6 +57,11 @@ public class UserList {
         File user = new File(RELATIVE_PATH);
         if(!user.exists()){
             user.getParentFile().mkdirs();
+            try {
+                user.createNewFile();
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+            }
         }
         try(FileOutputStream outputStream = new FileOutputStream(user)) {
             outputStream.write(json.getBytes());

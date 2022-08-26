@@ -4,7 +4,7 @@ public class Main {
 //        phoneBookReader.print();
 
         UserList userList = new UserList(".\\src\\main\\resources\\file2.txt");
-//        userList.print();
+        userList.print();
 
 
         WordFrequency wordFrequency = new WordFrequency(".\\src\\main\\resources\\file3.txt");
