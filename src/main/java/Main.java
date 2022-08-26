@@ -8,6 +8,6 @@ public class Main {
 
 
         WordFrequency wordFrequency = new WordFrequency(".\\src\\main\\resources\\file3.txt");
-        wordFrequency.print();
+//        wordFrequency.print();
     }
 }

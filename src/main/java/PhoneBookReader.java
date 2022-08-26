@@ -32,7 +32,7 @@ public class PhoneBookReader {
             System.err.print(e.getMessage());
         }
         String[] arr;
-        arr = numbers.split("\r\n");
+        arr = numbers.split(System.lineSeparator());
 
         for (String number : arr) {
             boolean validNumber = false;
