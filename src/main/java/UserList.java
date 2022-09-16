@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class UserList {
     private final String path;
-    private static final String RELATIVE_PATH = ".\\src\\main\\resources\\out\\user.json";
+    private static final String RELATIVE_PATH = "./src/main/resources/out/user.json";
 
     public String getPath() {
         return path;
